@@ -6,6 +6,14 @@ public class Category {
     public String desc;
     public String thumb;
 
+    public Category() {
+    }
+
+    public Category(String name, String desc, String thumb) {
+        this.name = name;
+        this.desc = desc;
+        this.thumb = thumb;
+    }
 
     public String getName() {
         return name;
