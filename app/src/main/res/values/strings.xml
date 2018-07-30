@@ -4,6 +4,8 @@
     <string name="nav_home">Home</string>
     <string name="nav_favourites">Favourites</string>
     <string name="nav_setting">Settings</string>
+    <string name="string_not_signed_in">Oops! You have to sign in first...</string>
+    <string name="logout">Logout</string>
 
 
 </resources>

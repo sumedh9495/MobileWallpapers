@@ -9,6 +9,7 @@ import android.view.MenuItem;
 
 import com.thecoolprogrammer.mobilewallpapers.R;
 import com.thecoolprogrammer.mobilewallpapers.fragments.HomeFragment;
+import com.thecoolprogrammer.mobilewallpapers.fragments.SettingsFragment;
 
 public class HomeActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener {
 
@@ -52,7 +53,7 @@ public class HomeActivity extends AppCompatActivity implements BottomNavigationV
                 break;
 
             case R.id.nav_set:
-                fragment = new HomeFragment();
+                fragment = new SettingsFragment();
                 break;
 
             default:

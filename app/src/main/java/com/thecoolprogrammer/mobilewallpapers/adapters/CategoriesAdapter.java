@@ -1,6 +1,7 @@
 package com.thecoolprogrammer.mobilewallpapers.adapters;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -11,6 +12,7 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.thecoolprogrammer.mobilewallpapers.R;
+import com.thecoolprogrammer.mobilewallpapers.activities.WallpapersActivity;
 import com.thecoolprogrammer.mobilewallpapers.models.Category;
 
 import org.w3c.dom.Text;
@@ -52,7 +54,7 @@ public class CategoriesAdapter extends RecyclerView.Adapter<CategoriesAdapter.Ca
         return categoryList.size();
     }
 
-    class CategoryViewHolder extends  RecyclerView.ViewHolder{
+    class CategoryViewHolder extends  RecyclerView.ViewHolder implements  View.OnClickListener{
 
         TextView textView;
         ImageView imageView;
@@ -63,6 +65,22 @@ public class CategoriesAdapter extends RecyclerView.Adapter<CategoriesAdapter.Ca
 
             textView = itemView.findViewById(R.id.text_view_cat_name);
             imageView = itemView.findViewById(R.id.image_view);
+
+            itemView.setOnClickListener(this);
+        }
+
+        @Override
+        public void onClick(View v) {
+            int p = getAdapterPosition();
+            Category c = categoryList.get(p);
+
+            Intent intent = new Intent(mCtx , WallpapersActivity.class);
+            intent.putExtra("category",c.name);
+
+            mCtx.startActivity(intent);
+
+
+
         }
     }
 
