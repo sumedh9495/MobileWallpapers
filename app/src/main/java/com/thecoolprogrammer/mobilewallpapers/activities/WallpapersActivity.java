@@ -3,6 +3,7 @@ package com.thecoolprogrammer.mobilewallpapers.activities;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
@@ -46,7 +47,9 @@ public class WallpapersActivity extends AppCompatActivity {
         wallpaperList = new ArrayList<>();
         recyclerView = findViewById(R.id.recycler_view);
         recyclerView.setHasFixedSize(true);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        //recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        recyclerView.setLayoutManager(new GridLayoutManager(WallpapersActivity.this,2));
+
         adapter = new WallpapersAdapter(this,wallpaperList );
 
         recyclerView.setAdapter(adapter);
