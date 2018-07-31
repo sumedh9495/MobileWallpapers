@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.MenuItem;
 
 import com.thecoolprogrammer.mobilewallpapers.R;
+import com.thecoolprogrammer.mobilewallpapers.fragments.FavouritesFragment;
 import com.thecoolprogrammer.mobilewallpapers.fragments.HomeFragment;
 import com.thecoolprogrammer.mobilewallpapers.fragments.SettingsFragment;
 
@@ -49,7 +50,7 @@ public class HomeActivity extends AppCompatActivity implements BottomNavigationV
 
 
             case R.id.nav_fav:
-                fragment = new HomeFragment();
+                fragment = new FavouritesFragment();
                 break;
 
             case R.id.nav_set:
